@@ -29,11 +29,13 @@ def build_event_linked_list(sent):
         arg0 = re.search(r"(\[ARG0: )(.*?)(\])",srl['description'])[2]
         print(arg0)
     else:
+        print('debug:',srl['description'])
         arg0 = ''
     if re.search(r"(\[ARG1: )(.*?)(\])",srl['description']):
         arg1 = re.search(r"(\[ARG1: )(.*?)(\])",srl['description'])[2]
         print(arg1)
     else:
+        print('debug:',srl['description'])
         arg1 = ''
     if re.search(r"(\[ARGM-MNR: )(.*?)(\])",srl['description']):
         mod = re.search(r"(\[ARGM-MNR: )(.*?)(\])",srl['description'])[2]
